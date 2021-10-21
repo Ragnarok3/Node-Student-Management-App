@@ -3,6 +3,8 @@ const path = require('path')
 const handlebars = require('handlebars')
 const hbs = require('hbs')
 
+const port = process.env.PORT || 3000
+
 
 
 const app = express()
@@ -36,6 +38,6 @@ app.get('*',(req,res) => {
   res.render('404')
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('server is up on port 3000')
 })
